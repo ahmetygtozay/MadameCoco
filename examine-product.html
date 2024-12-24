@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="examine-product.css">
+    <title>Ürün Detayı - Madame Coco</title>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
+</head>
+
+<body>
+    <!-- Üst Header -->
+    <header class="top-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Mağazalar</a></li>
+                    <li><a href="#">Sipariş Takibi</a></li>
+                    <li><a href="#">Kampanyalar</a></li>
+                    <li><a href="#">Yardım</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ana Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Ürün, kategori veya marka ara...">
+                <button>
+                    <img src="images/search-icon.png" alt="Ara">
+                </button>
+            </div>
+            <div class="icons">
+                <div class="icon user-icon">
+                    <img src="images/user-icon.png" alt="User Icon">
+                    <div class="dropdown-menu">
+                        <a href="#login">Giriş Yap</a>
+                        <a href="register.html">Kayıt Ol</a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <img src="images/shopping-bag-icon.png" alt="Cart Icon">
+                    <span id="cart-count" class="cart-count">0</span> <!-- Sepet sayısı buraya gelecek -->
+                </div>
+                <div class="icon">
+                    <img src="images/heart-icon.png" alt="Favorites Icon">
+                </div>
+                <div class="icon">
+                    <img src="images/bell-icon.png" alt="Notifications Icon">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ürün Detay Sayfası -->
+<main class="product-detail">
+    <div class="container">
+        <div class="product">
+            <div class="product-image">
+                <img src="images/product2.jpg" alt="Ürün Resmi">
+            </div>
+            <div class="product-info">
+                <h1>Krom Tencere Krem</h1>
+                <p class="price">499.99 ₺</p>
+                <div class="cart-controls">
+                    <button id="decrease" class="quantity-btn">-</button>
+                    <span id="product-count" class="quantity-display">0</span>
+                    <button id="increase" class="quantity-btn">+</button>
+                </div>
+                
+                <button class="add-to-cart" style="color: aliceblue;">Sepete Ekle</button>
+                
+                <!-- Yeni Eklenen Kutu Bilgileri -->
+                <div class="product-benefits">
+                    <div class="benefit-box">
+                        <img src="images/ssl.png" alt="SSL Icon">
+                        <p>128 Bit SSL Doğrulama</p>
+                    </div>
+                    <div class="benefit-box">
+                        <img src="images/shipped.png" alt="Shipping Icon">
+                        <p>Ücretsiz Kargo</p>
+                    </div>
+                    <div class="benefit-box">
+                        <img src="images/credit-card.png" alt="Installments Icon">
+                        <p>12 Aya Varan Taksit İmkanı</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h2>Ürün Özellikleri:</h2>
+            <ul>
+                <li>Malzeme: Krom</li>
+                <li>Kaplama: Yanmaz, Yapışmaz</li>
+                <li>Ebat: 28 cm</li>
+            </ul>
+
+            <h2>Ürün Açıklaması</h2>
+            <p>Yüksek kaliteli krom malzemeden üretilmiş olup, uzun ömürlü kullanım sağlar.
+                Yanmaz ve yapışmaz kaplama sayesinde yemekleriniz kolayca kayar ve temizlik çok daha pratik hale gelir.
+                28 cm ebatıyla ideal büyüklükte, farklı yemek tarifleri için uygun.
+                Şık ve modern tasarımıyla mutfaklarınıza estetik bir dokunuş katar.
+                Isıyı eşit dağıtarak enerji tasarrufu sağlar ve yemeklerinizin mükemmel pişmesini garanti eder.
+                Ergonomik kulpları sayesinde güvenli ve rahat bir kullanım sunar.</p>
+
+            <h2>Kullanıcı Değerlendirmeleri</h2>
+            <p>⭐⭐⭐⭐☆ (4.3)</p>
+            <p>"Harika bir ürün, tavsiye ederim!" - A**** H*******</p>
+            <p>"Fiyat performans olarak iyi." - M***** K*****</p>
+        </div>
+
+        <!-- Spline Embed -->
+        <div class="spline-container">
+            <h2>Mutfağınızı Tasarlayın!</h2>
+            <spline-viewer url="http://prod.spline.design/rLDooBuCyD7lHjax/scene.splinecode"></spline-viewer>
+        </div>
+    </div>
+</main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 - Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

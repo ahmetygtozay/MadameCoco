@@ -1,0 +1,358 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ana içerik ve footer için ayar */
+.content {
+    flex: 1; /* Ana içeriği genişlet */
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #001f3f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Top Header */
+.top-header {
+    background-color: #001f3f;
+    color: #fff;
+    font-size: 14px;
+}
+
+.top-header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.top-header nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.top-header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Main Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Yatayda rahatlık için padding eklendi */
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    width: 100%; /* Yatayda %100 genişlik */
+    box-sizing: border-box; /* Padding genişliği aşmaması için */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Elemanlar arasında boşluk */
+    width: 100%;
+}
+
+.main-header .logo img {
+    height: 40px;
+}
+
+.main-header .search-bar {
+    display: flex;
+    flex-grow: 1; /* Orta kısımda daha fazla yer kaplar */
+    margin: 0 20px;
+    align-items: center;
+}
+
+.main-header .search-bar input {
+    flex-grow: 1;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px ;
+    height: 40px;
+    font-size: 16px;
+}
+
+.main-header .search-bar button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    height: 50px;
+}
+
+.main-header .search-bar button img {
+    height: 20px;
+}
+
+.main-header .icons {
+    display: flex;
+    gap: 20px; /* İkonlar arasında boşluk */
+}
+
+.main-header .icon img {
+    height: 24px;
+    cursor: pointer;
+}
+
+
+/* Footer */
+footer {
+    background-color: #001f3f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-header .search-bar {
+        display: none;
+    }
+
+    .main-header .icons {
+        display: none;
+    }
+    .main-header .logo{
+        margin: auto;
+    }
+    
+}
+
+/* Kullanıcı İkonu */
+.user-icon {
+    position: relative;
+}
+
+.user-icon img {
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Dropdown Menü */
+.dropdown-menu {
+    position: absolute;
+    top: 30px; /* İkonun hemen altına yerleştirmek için */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none; /* Varsayılan olarak gizli */
+    flex-direction: column;
+    min-width: 120px;
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none; /* Son elemanın altında çizgi olmasın */
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hover ile Dropdown Görünümü */
+.user-icon:hover .dropdown-menu {
+    display: flex; /* İkon veya menüye gelindiğinde görünür */
+}
+
+.dropdown-menu:hover {
+    display: flex; /* Menü üzerinde gezinirken görünür kalır */
+}
+
+/* Profile Form */
+.profile-update-container {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.profile-update-form .form-group {
+    margin-bottom: 20px;
+}
+
+.profile-update-form .form-group label {
+    font-weight: bold;
+}
+
+.profile-update-form .input-container {
+    position: relative;
+}
+
+.profile-update-form .input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.profile-update-form .input-container .edit-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.profile-update-form .gender-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-update-form .gender-btn {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-update-form .gender-btn.selected {
+    background-color: #ffcc00;
+}
+
+/* Hidden by default */
+#password-change-form.hidden {
+    display: none;
+}
+
+/* Genel Input Alanı Şekillendirmesi */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Input kutuları aktifken ve değiştirilebiliyorken */
+input:focus {
+    border-color: #ffcc00;
+}
+
+/* Editlenemezken input alanı gri olacak */
+input[readonly] {
+    background-color: #f4f4f4;
+    color: #888;
+    border-color: #ddd;
+}
+
+/* E-posta kutusunun özel şekillendirmesi */
+#email {
+    background-color: #f4f4f4;
+    color: #888;
+    border-color: #ddd;
+}
+
+/* Şifre Alanı Şekillendirmesi */
+#password {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Şifre Değiştirme Alanı */
+#password-change-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#password-change-form button {
+    padding: 10px 15px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#password-change-form button:hover {
+    background-color: #e6b800;
+}
+
+/* Kalem İkonu Stili */
+.edit-icon {
+    font-size: 18px;
+    margin-left: 10px;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Kalem İkonu Hover Durumu */
+.edit-icon:hover {
+    color: #0056b3;
+}
+
+/* Kayıt Ol Butonu */
+.update-btn {
+    background-color: #003366; /* Navyblue rengi */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px; /* Butona yuvarlak köşeler katmak için */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Butona hafif gölge ekleyelim */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Yumuşak geçiş animasyonu */
+    margin: 20px auto; /* Butonu ortalamak için */
+    display: block; /* Butonun blok element olarak davranmasını sağla */
+    width: 200px; /* Sabit genişlik */
+}
+
+.update-btn:hover {
+    background-color: #003366; /* Hoverda biraz daha koyu navy */
+    transform: translateY(-4px); /* Hoverda hafif yukarı kayma efekti */
+}
+
+.update-btn:active {
+    transform: translateY(2px); /* Buton tıklandığında biraz aşağıya kayma */
+}

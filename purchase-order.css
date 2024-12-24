@@ -1,0 +1,168 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Ürün Sayfası */
+.product-page {
+    padding: 20px;
+}
+
+.product-detail {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.product-image img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.checkout-form {
+    margin: 20px auto;
+    width: 50%;  /* Genişliği daha esnek yap */
+    max-width: 1400px;  /* Genişliği artırarak daha büyük bir form görünümü elde et */
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+.checkout-form.hidden {
+    display: none;
+}
+
+.checkout-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #001f3f;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group select {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #ffcc00;
+    color: #001f3f;
+}
+
+/* Ana Header İkonları */
+.main-header .icons {
+    display: flex;
+    gap: 20px; /* İkonlar arasında boşluk */
+}
+
+.main-header .icons img {
+    height: 30px; /* İkon boyutunu azalt */
+    width: 30px;  /* Yükseklik ile orantılı olarak genişliği ayarla */
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.main-header .icons img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Gizleme için ortak sınıf */
+.hidden {
+    display: none;
+}
+
+.checkout-form.hidden .error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.checkout-form.hidden input.valid {
+    border-color: green;
+}
+
+.checkout-form.hidden input.invalid {
+    border-color: red;
+}
+
+/* Kayıt Formu Doğrulama Mesajları */
+.checkout-form.hidden .error-message {
+    display: none;
+}
+
+.checkout-form.hidden .error-message.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .product-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-image img {
+        max-width: 100%;
+    }
+    
+    .checkout-form {
+        width: 90%;
+    }
+
+    .phone-container {
+        display: flex;             /* Flex container yapısı */
+        flex-direction: row;       /* Yatay sıralama */
+        justify-content: space-between; /* Öğeler arasındaki boşlukları ayarlama */
+        align-items: center;       /* Dikeyde hizalama */
+        width: 100%;               /* Tam genişlik */
+    }
+
+    .phone-container select, 
+    .phone-container input {
+        width: 48%;                /* Her iki öğenin de genişliğini belirle */
+        margin-bottom: 10px;
+    }
+
+    .submit-button {
+        font-size: 1.2em;
+    }
+}

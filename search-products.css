@@ -1,0 +1,280 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 20px;
+    align-items: center;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.search-bar button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-dropdown {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 97%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 20px;
+    z-index: 100;
+}
+
+.dropdown-section {
+    flex: 1;
+}
+
+.dropdown-section img {
+    margin-left: 40%;
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.product-card img {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar input, .search-bar button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-dropdown {
+        flex-direction: column;
+    }
+}
+
+.search-dropdown-left ul {
+    list-style: none;
+    max-width: 80%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Satırları sığdırmak için */
+    gap: 5px; /* Kategoriler arasında boşluk */
+}
+
+.search-dropdown-left ul li {
+    flex: 1 1 calc(50% - 15px); /* Kategorileri eşit genişlikte yap */
+    display: flex;
+    width: 20px;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.search-dropdown-left ul li:hover {
+    transform: scale(1.05); /* Hoverda büyütme efekti */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    background-color: #001f3f ;
+    
+}
+
+.search-dropdown-left ul li:hover a{
+    color: white;
+}
+
+.search-dropdown-left ul li img {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px; /* Simge ile metin arasında boşluk */
+}
+
+.search-dropdown-left ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-section img{
+    height: 410px;
+    width: 225px;
+    border-radius: 5%;
+
+}
+.popular-products-container {
+    display: flex; /* Kartları yan yana dizer */
+    flex-wrap: wrap; /* Taşan kartlar alt satıra geçer */
+    gap: 10px; /* Kartlar arasındaki boşluk */
+    justify-content: center; /* Kartları yatayda ortalar */
+}
+
+.popular-products-container .product-card {
+    flex: 1 1 calc(45% - 10px); /* Kart genişliği: %23 - boşluk */
+    max-width: calc(45% - 10px); /* Taşmayı önlemek için maksimum genişlik */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    border: 1px solid #ddd; /* İnce kenarlık */
+    border-radius: 8px; /* Köşeleri yuvarlar */
+    padding: 10px; /* İçerik ile kenar arası boşluk */
+    text-align: center; /* İçeriği ortalar */
+    background-color: #fff; /* Arka plan beyaz */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popular-products-container .product-card:hover {
+    transform: scale(1.05); /* Hoverda büyüme efekti */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge */
+}
+
+.popular-products-container .product-card img {
+    max-width: 100%; /* Görsellerin taşmasını engeller */
+    height: auto; /* Görselin oranını korur */
+    border-radius: 8px; /* Görselin köşelerini yuvarlar */
+}
+
+.popular-products-container .product-card p {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .popular-products-container .product-card {
+        flex: 1 1 calc(48% - 10px); /* Tablet görünümünde iki kart */
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-products-container .product-card {
+        flex: 1 1 calc(100% - 10px); /* Telefon görünümünde tek kart */
+    }
+}
+
+/* Mobil Görünüm İçin Arama Dropdown Stilleri */
+@media (max-width: 768px) {
+    .search-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        z-index: 100;
+        overflow-y: auto;
+        max-height: 70vh; /* Dropdown çok uzun olduğunda kaydırma yapılabilir */
+    }
+
+    .dropdown-section img {
+        height: 200px; /* Görselleri küçült */
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .search-dropdown-left ul {
+        flex-direction: column; /* Kategorileri dikey hizala */
+        gap: 10px; /* Aralıkları artır */
+    }
+
+    .search-dropdown-left ul li {
+        flex: 1 1 auto; /* Eşit genişlikte yap */
+        padding: 8px; /* Daha küçük padding */
+    }
+
+    .search-bar {
+        flex-direction: column; /* Arama çubuğunu dikey yap */
+    }
+
+    .search-bar input {
+        margin-bottom: 10px; /* Butonla arasına boşluk ekle */
+        width: 100%;
+    }
+
+    .search-bar button {
+        width: 100%;
+    }
+
+    .popular-products-container {
+        flex-direction: column; /* Kartları dikey hizala */
+        gap: 15px; /* Aralıkları artır */
+    }
+
+    .popular-products-container .product-card {
+        width: 100%; /* Kartları tam genişlik yap */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-dropdown {
+        padding: 10px; /* Daha küçük padding */
+    }
+
+    .dropdown-section img {
+        height: 150px; /* Görselleri küçült */
+        width: auto;
+    }
+
+    .search-dropdown-left ul li {
+        padding: 6px; /* Daha küçük padding */
+        font-size: 14px; /* Daha küçük yazı boyutu */
+    }
+
+    .popular-products-container .product-card {
+        padding: 8px; /* Daha küçük padding */
+    }
+
+    .popular-products-container .product-card p {
+        font-size: 12px; /* Daha küçük yazı boyutu */
+    }
+}

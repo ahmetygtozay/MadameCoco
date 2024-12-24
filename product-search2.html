@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-search.css">
+    <title>Madame Coco - Mutfak Ürünleri</title>
+</head>
+<body>
+    <!-- Üst Header -->
+    <header class="top-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Mağazalar</a></li>
+                    <li><a href="#">Sipariş Takibi</a></li>
+                    <li><a href="#">Kampanyalar</a></li>
+                    <li><a href="#">Yardım</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ana Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Ürün, kategori veya marka ara...">
+                <button>
+                    <img src="images/search-icon.png" alt="Ara">
+                </button>
+            </div>
+            <div class="icons">
+                <div class="icon user-icon">
+                    <img src="images/user-icon.png" alt="User Icon">
+                    <!-- Dropdown Menü -->
+                    <div class="dropdown-menu">
+                        <a href="#login">Giriş Yap</a>
+                        <a href="register.html">Kayıt Ol</a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <img src="images/shopping-bag-icon.png" alt="Cart Icon">
+                </div>
+                <div class="icon">
+                    <img src="images/heart-icon.png" alt="Favorites Icon">
+                </div>
+                <div class="icon">
+                    <img src="images/bell-icon.png" alt="Notifications Icon">
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- Ana İçerik -->
+    <main class="content">
+        <div class="container">
+            <h1 style="margin-left: 42%;">Mutfak Ürünleri</h1>
+
+            <!-- Filtreler -->
+<section class="filters" style="margin-left: 3%;">
+    <div class="filter-category">
+        <!-- Materyal -->
+        <div class="filter">
+            <div class="dropdown">
+                <button class="dropbtn">Materyal</button>
+                <div class="dropdown-content">
+                    <a href="#">Paslanmaz Çelik</a>
+                    <a href="#">Cam</a>
+                    <a href="#">Ahşap</a>
+                    <a href="#">Plastik</a>
+                    <a href="#">Seramik</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Renk -->
+        <div class="filter">
+            <div class="dropdown">
+                <button class="dropbtn">Renk</button>
+                <div class="dropdown-content">
+                    <a href="#">Beyaz</a>
+                    <a href="#">Siyah</a>
+                    <a href="#">Kırmızı</a>
+                    <a href="#">Gri</a>
+                    <a href="#">Mavi</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fiyat -->
+        <div class="filter">
+            <div class="dropdown">
+                <button class="dropbtn">Fiyat</button>
+                <div class="dropdown-content">
+                    <a href="#">0₺ - 50₺</a>
+                    <a href="#">50₺ - 200₺</a>
+                    <a href="#">200₺ - 500₺</a>
+                    <a href="#">500₺ ve üzeri</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ürün Türü -->
+        <div class="filter">
+            <div class="dropdown">
+                <button class="dropbtn">Ürün Türü</button>
+                <div class="dropdown-content">
+                    <a href="#">Tencere</a>
+                    <a href="#">Tabak</a>
+                    <a href="#">Çatal & Bıçak</a>
+                    <a href="#">Mutfak Aksesuarı</a>
+                    <a href="#">Kesme Tahtası</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Set Mi? -->
+        <div class="filter">
+            <div class="dropdown">
+                <button class="dropbtn">Set</button>
+                <div class="dropdown-content">
+                    <a href="#">Evet (Set)</a>
+                    <a href="#">Hayır (Tek Parça)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kullanım Amacı -->
+        <div class="filter">
+            <div class="dropdown">
+                <button class="dropbtn">Kullanım Amacı</button>
+                <div class="dropdown-content">
+                    <a href="#">Servis</a>
+                    <a href="#">Hazırlık</a>
+                    <a href="#">Saklama</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <!-- Ürünler -->
+<section class="products">
+    <div class="product">
+        <img src="images/product2.jpg" alt="Tencere">
+        <h3>Tencere</h3>
+        <p> 639.99 ₺</p>
+        <div class="product-icons">
+            <img src="images/shopping-bag-icon.png" alt="Sepet">
+            <img src="images/heart-icon.png" alt="Beğen">
+        </div>
+    </div>
+    <div class="product">
+        <img src="images/tea.jpg" alt="Çaydanlık">
+        <h3>Çaydanlık</h3>
+        <p> 1574.99 ₺</p>
+        <div class="product-icons">
+            <img src="images/shopping-bag-icon.png" alt="Sepet">
+            <img src="images/heart-icon.png" alt="Beğen">
+        </div>
+    </div>
+    <div class="product">
+        <img src="images/tenceremc.jpg" alt="Tencere Seti">
+        <h3>Mutfak Tencere Seti</h3>
+        <p> 2229.99 ₺</p>
+        <div class="product-icons">
+            <img src="images/shopping-bag-icon.png" alt="Sepet">
+            <img src="images/heart-icon.png" alt="Beğen">
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 - Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html>

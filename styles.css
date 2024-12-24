@@ -1,0 +1,202 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ana içerik ve footer için ayar */
+.content {
+    flex: 1; /* Ana içeriği genişlet */
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #001f3f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Top Header */
+.top-header {
+    background-color: #001f3f;
+    color: #fff;
+    font-size: 14px;
+}
+
+.top-header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.top-header nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.top-header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Main Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Yatayda rahatlık için padding eklendi */
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    width: 100%; /* Yatayda %100 genişlik */
+    box-sizing: border-box; /* Padding genişliği aşmaması için */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Elemanlar arasında boşluk */
+    width: 100%;
+}
+
+.main-header .logo img {
+    height: 40px;
+}
+
+.main-header .search-bar {
+    display: flex;
+    flex-grow: 1; /* Orta kısımda daha fazla yer kaplar */
+    margin: 0 20px;
+    align-items: center;
+}
+
+.main-header .search-bar input {
+    flex-grow: 1;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px ;
+    height: 40px;
+    font-size: 16px;
+}
+
+.main-header .search-bar button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    height: 50px;
+}
+
+.main-header .search-bar button img {
+    height: 20px;
+}
+
+.main-header .icons {
+    display: flex;
+    gap: 20px; /* İkonlar arasında boşluk */
+}
+
+.main-header .icon img {
+    height: 24px;
+    cursor: pointer;
+}
+
+
+/* Footer */
+footer {
+    background-color: #001f3f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-header .search-bar {
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-header .icons {
+       display: none;
+    }
+
+    .main-header .search-bar{
+        display: none;
+    }
+     .main-header .logo{
+        margin: auto;
+     }
+
+     
+}
+
+/* Kullanıcı İkonu */
+.user-icon {
+    position: relative;
+}
+
+.user-icon img {
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Dropdown Menü */
+.dropdown-menu {
+    position: absolute;
+    top: 30px; /* İkonun hemen altına yerleştirmek için */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none; /* Varsayılan olarak gizli */
+    flex-direction: column;
+    min-width: 120px;
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none; /* Son elemanın altında çizgi olmasın */
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hover ile Dropdown Görünümü */
+.user-icon:hover .dropdown-menu {
+    display: flex; /* İkon veya menüye gelindiğinde görünür */
+}
+
+.dropdown-menu:hover {
+    display: flex; /* Menü üzerinde gezinirken görünür kalır */
+}

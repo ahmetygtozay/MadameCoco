@@ -1,0 +1,197 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+
+
+/* Ürün Detay */
+.product-detail .container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.product {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    margin-bottom: 10px;
+    
+
+}
+
+.product-info .price {
+    font-size: 20px;
+    color: #e60023;
+    font-weight: bold;
+    margin: 10px 0;
+    margin-bottom: 15px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    margin-bottom: 20px;
+}
+
+.quantity-btn {
+    padding: 10px 15px;
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity-value {
+    font-size: 16px;
+}
+
+.add-to-cart {
+    padding: 12px 25px; /* Butonun içindeki paddingi artırarak daha geniş hale getirebilirsiniz */
+    margin-top: 20px; /* Buton ile üst kısmı arasında boşluk */
+    background-color: #001f3f;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #e6b800;
+}
+
+/* Yeni Eklenen Kutu Bilgileri */
+.product-benefits {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.benefit-box {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-box img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.benefit-box p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Ürün Detayları */
+.product-details {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #001f3f;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+spline-viewer {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+}
+
+.main-header .icons .icon {
+    margin-left: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-display {
+    font-size: 18px;
+    margin: 0 10px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #001f3f;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    display: none; /* Başlangıçta gizle */
+}

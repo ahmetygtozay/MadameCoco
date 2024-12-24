@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="search-products.css">
+    <title>Madame Coco - Ürün Arama</title>
+</head>
+<body>
+    <!-- Üst Header -->
+    <header class="top-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Mağazalar</a></li>
+                    <li><a href="#">Sipariş Takibi</a></li>
+                    <li><a href="#">Kampanyalar</a></li>
+                    <li><a href="#">Yardım</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ana Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            
+            <!-- Düzenlenmiş Search Bar -->
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Ürün, kategori veya marka ara..." 
+                    onfocus="showDropdown()" 
+                    onblur="hideDropdown()"
+                >
+                <button>
+                    <img src="images/search-icon.png" alt="Ara">
+                </button>
+                <!-- Search Dropdown -->
+                <div id="search-dropdown" class="search-dropdown">
+                    <div class="search-dropdown-left">
+                        <h4>Popüler Kategoriler</h4>
+                        <ul>
+                            <li>
+                                <img src="images/spatula.png" alt="">
+                                <a href="product-search.html">Mutfak</a>
+                            </li>
+                            <li>
+                                <img src="images/baby-bath-tub.png" alt="">
+                                <a href="product-search2.html">Banyo</a>
+                            </li>
+                            <li>
+                                <img src="images/side-table.png" alt="">
+                                <a href="#">Salon</a>
+                            </li>
+                            <li>
+                                <img src="images/rug.png" alt="">
+                                <a href="#">Halı</a>
+                            </li>
+                            <li>
+                                <img src="images/personal-hygiene.png" alt="">
+                                <a href="#">Kişisel Bakım</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="dropdown-section">
+                        <h4>Popüler Ürünler</h4>
+                        <div class="popular-products-container">
+                            <div class="product-card">
+                                <img src="images/battaniye.jpg" alt="Ürün 1" width="160px">
+                                <p>Chevron Tek Kişilik Battaniye 150x200 Mürdüm</p>
+                                
+                            </div>
+                            <div class="product-card">
+                                <img src="images/ortu1.jpg" alt="Ürün 2">
+                                <p>Gül Kurusu Battaniye</p>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="dropdown-section">
+                        <img src="images/promotional-banner.png" alt="Kampanya Bannerı">
+                    </div>
+                </div>
+            </div>
+
+            <div class="icons">
+                <div class="icon user-icon">
+                    <img src="images/user-icon.png" alt="User Icon">
+                    <div class="dropdown-menu">
+                        <a href="#login">Giriş Yap</a>
+                        <a href="register.html">Kayıt Ol</a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <img src="images/shopping-bag-icon.png" alt="Cart Icon">
+                </div>
+                <div class="icon">
+                    <img src="images/heart-icon.png" alt="Favorites Icon">
+                </div>
+                <div class="icon">
+                    <img src="images/bell-icon.png" alt="Notifications Icon">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ana İçerik -->
+    <main class="content">
+        <div class="container">
+         
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 - Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+    <script>
+        function showDropdown() {
+            document.getElementById('search-dropdown').style.display = 'flex';
+        }
+        function hideDropdown() {
+            document.getElementById('search-dropdown').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

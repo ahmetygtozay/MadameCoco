@@ -1,0 +1,374 @@
+/* Kayıt Formu İçin Stil */
+.register-form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-form-container label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.register-form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Telefon numarası ve bayrak ikonları için stil */
+.register-form-container .phone-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.register-form-container select {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.register-form-container input[type="tel"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Bayrak simgeleri için stil */
+.register-form-container .flag-icon {
+    font-size: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Focus olduğunda input ve select kutularının stili */
+.register-form-container :focus, input[type="tel"]:focus {
+    border-color: #000080; /* Navy renkli kenar */
+    box-shadow: 0 0 8px rgba(0, 0, 255, 0.3); /* Hafif mavi gölge */
+}
+
+
+.register-form-container .error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.register-form-container input.valid {
+    border-color: green;
+}
+
+.register-form-container input.invalid {
+    border-color: red;
+}
+
+/* Kayıt Formu Doğrulama Mesajları */
+.register-form-container .error-message {
+    display: none;
+}
+
+.register-form-container .error-message.active {
+    display: block;
+}
+
+/* Kayıt Ol Butonu */
+.register-btn {
+    background-color: #003366; /* Navyblue rengi */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px; /* Butona yuvarlak köşeler katmak için */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Butona hafif gölge ekleyelim */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Yumuşak geçiş animasyonu */
+    margin: 20px auto; /* Butonu ortalamak için */
+    display: block; /* Butonun blok element olarak davranmasını sağla */
+    width: 200px; /* Sabit genişlik */
+}
+
+.register-btn:hover {
+    background-color: #003366; /* Hoverda biraz daha koyu navy */
+    transform: translateY(-4px); /* Hoverda hafif yukarı kayma efekti */
+}
+
+.register-btn:active {
+    transform: translateY(2px); /* Buton tıklandığında biraz aşağıya kayma */
+}
+
+.register-form-container .password-rules {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #f44336; /* Başlangıçta kırmızı */
+}
+
+.register-form-container .password-rules p {
+    margin: 5px 0;
+}
+
+.register-form-container .password-rules p.green {
+    color: #4caf50; /* Yeşil renk, doğru girilen kriterler için */
+}
+
+.register-form-container .password-rules p.red {
+    color: #f44336; /* Kırmızı renk, yanlış girilen kriterler için */
+}
+
+.register-form-container input[type="password"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+/* Mobil cihazlar için (768px ve daha küçük) */
+@media screen and (max-width: 768px) {
+    .register-form-container {
+        padding: 15px;
+        margin: 20px auto;
+        width: 85%; /* Daha dar ekranlara uyum için genişliği azalt */
+    }
+
+    .register-form-container h2 {
+        font-size: 20px;
+    }
+
+    .register-form-container input,
+    .register-form-container select {
+        font-size: 14px;
+        padding: 10px;
+        max-width: 80%;
+    }
+
+    .register-form-container input[type="password"] {
+        max-width: 80%; /* Mobil ekranlar için genişlik kısıtlamasını kaldır */
+    }
+
+    .register-form-container .phone-container {
+        flex-direction: row; /* Elemanları dikey hizala */
+        align-items: flex-start;
+        gap: 5px;
+
+    }
+    .register-form-container input[type="phone"]{
+        height: 65px;
+    }
+
+    .register-form-container select {
+        margin-right: 0; /* Yan boşluğu kaldır */
+        margin-bottom: 10px; /* Alt boşluk ekle */
+    }
+
+    .register-btn {
+        width: 100%; /* Buton genişliğini tam yap */
+        padding: 10px; /* Daha küçük padding */
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+}
+
+/* Küçük mobil cihazlar için (480px ve daha küçük) */
+@media screen and (max-width: 480px) {
+    .main-header .search-bar input {
+        font-size: 12px; /* Yazı boyutunu küçült */
+        padding: 6px; /* Daha küçük padding */
+    }
+
+    .main-header .search-bar button {
+        padding: 6px; /* Daha küçük padding */
+    }
+
+    .icons img {
+        width: 24px; /* Simge boyutunu küçült */
+        height: 24px;
+    }
+
+    .register-form-container label {
+        font-size: 12px; /* Etiket boyutunu küçült */
+    }
+
+    .register-form-container .password-rules p {
+        font-size: 12px; /* Şifre kuralları için yazı boyutunu küçült */
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+/* Mobil cihazlar için (768px ve daha küçük) alt header düzenlemesi */
+@media screen and (max-width: 768px) {
+    .main-header .search-bar,
+    .main-header .icons {
+        display: none; /* Arama çubuğunu ve ikonları gizle */
+    }
+
+    .main-header .logo {
+        margin: 0 auto; /* Logoyu ortala */
+        text-align: center;
+    }
+}
+
+/* Tam ekran bulanık arka plan */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Yarı saydam siyah arka plan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Popup'ın diğer öğelerin üstünde görünmesi için */
+}
+
+/* Popup stilini ayarlıyoruz */
+.popup {
+    background-color: #4caf50;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #f1f1f1;
+}
+
+/* Popup'ı başlangıçta gizle */
+.overlay.hidden {
+    display: none;
+}
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content i {
+    font-size: 50px;
+    color: green;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.popup-content button a{
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.popup-content button a:visited{
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: darkgreen;
+}
+
+/* Mobil cihazlar için (768px ve daha küçük) alt header düzenlemesi */
+@media screen and (max-width: 768px) {
+    .popup{
+        width: 80%;
+    }
+
+    .popup-content{
+        justify-content:center;
+    }
+
+    
+}

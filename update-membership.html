@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="update-membership.css">
+    <title>Madame Coco</title>
+</head>
+
+<body>
+    <!-- Üst Header -->
+    <header class="top-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Mağazalar</a></li>
+                    <li><a href="#">Sipariş Takibi</a></li>
+                    <li><a href="#">Kampanyalar</a></li>
+                    <li><a href="#">Yardım</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ana Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Ürün, kategori veya marka ara...">
+                <button>
+                    <img src="images/search-icon.png" alt="Ara">
+                </button>
+            </div>
+            <div class="icons">
+                <div class="icon user-icon">
+                    <img src="images/user-icon.png" alt="User Icon">
+                    <!-- Dropdown Menü -->
+                    <div class="dropdown-menu">
+                        <a href="#login">Giriş Yap</a>
+                        <a href="register.html">Kayıt Ol</a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <img src="images/shopping-bag-icon.png" alt="Cart Icon">
+                </div>
+                <div class="icon">
+                    <img src="images/heart-icon.png" alt="Favorites Icon">
+                </div>
+                <div class="icon">
+                    <img src="images/bell-icon.png" alt="Notifications Icon">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-update-container">
+        <form class="profile-update-form">
+            <!-- Ad -->
+            <div class="form-group">
+                <label for="first-name">Ad:</label>
+                <div class="input-container">
+                    <input type="text" id="first-name" value="Ahmet" readonly>
+                    <span class="edit-icon" onclick="enableEdit('first-name')">🖊️</span>
+                </div>
+            </div>
+
+            <!-- Soyad -->
+            <div class="form-group">
+                <label for="last-name">Soyad:</label>
+                <div class="input-container">
+                    <input type="text" id="last-name" value="Yılmaz" readonly>
+                    <span class="edit-icon" onclick="enableEdit('last-name')">🖊️</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" value="ahmet@example.com" readonly>
+            </div>
+
+            <!-- Cep Telefonu -->
+            <div class="form-group">
+                <label for="phone">Cep Telefonu:</label>
+                <div class="input-container">
+                    <input type="tel" id="phone" value="(555)123-45-67" readonly>
+                    <span class="edit-icon" onclick="enableEdit('phone')">🖊️</span>
+                </div>
+            </div>
+
+            <!-- Cinsiyet -->
+            <div class="form-group">
+                <label>Cinsiyet:</label>
+                <div class="gender-buttons">
+                    <button type="button" class="gender-btn" onclick="selectGender('male')">Erkek</button>
+                    <button type="button" class="gender-btn" onclick="selectGender('female')">Kadın</button>
+                    <button type="button" class="gender-btn" onclick="selectGender('not-specified')">Belirtmek
+                        İstemiyorum</button>
+                </div>
+            </div>
+
+            <!-- Doğum Günü -->
+            <div class="form-group">
+                <label for="dob">Doğum Günü:</label>
+                <input type="date" id="dob" value="1995-05-23">
+            </div>
+
+
+
+            <!-- Şifre Kısmı -->
+            <div class="form-group">
+                <label for="password">Şifre:</label>
+                <div class="input-container">
+                    <input type="password" id="password" value="********" readonly>
+                    <!-- Kalem simgesi -->
+                    <a href="change-password.html" class="edit-icon" title="Şifreyi Değiştir">
+                        ✏️
+                    </a>
+                </div>
+            </div>
+
+            <!-- Şifre Değiştirme Formu -->
+            <div id="password-change-form" class="hidden">
+                <label for="new-password">Yeni Şifre:</label>
+                <input type="password" id="new-password" placeholder="Yeni şifre girin">
+                <label for="confirm-password">Yeni Şifreyi Onayla:</label>
+                <input type="password" id="confirm-password" placeholder="Yeni şifreyi onaylayın">
+                <button type="button" onclick="changePassword()">Şifreyi Yenile</button>
+            </div>
+
+
+            <!-- Güncelle Butonu -->
+            <button type="submit" class="update-btn">Bilgileri Güncelle</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 - Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="update-membership.js"></script>
+</body>
+
+</html>

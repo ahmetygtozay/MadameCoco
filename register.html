@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <!-- Ana stil dosyası (header/footer için) -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Kayıt formu için özel stil dosyası -->
+    <link rel="stylesheet" href="register.css">
+    <!-- FontAwesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Üst Header -->
+    <header class="top-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Mağazalar</a></li>
+                    <li><a href="#">Sipariş Takibi</a></li>
+                    <li><a href="#">Kampanyalar</a></li>
+                    <li><a href="#">Yardım</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ana Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Ürün, kategori veya marka ara...">
+                <button>
+                    <img src="images/search-icon.png" alt="Ara">
+                </button>
+            </div>
+            <div class="icons">
+                <div class="icon user-icon">
+                    <img src="images/user-icon.png" alt="User Icon">
+                    <!-- Dropdown Menü -->
+                    <div class="dropdown-menu">
+                        <a href="#login">Giriş Yap</a>
+                        <a href="#register">Kayıt Ol</a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <img src="images/shopping-bag-icon.png" alt="Cart Icon">
+                </div>
+                <div class="icon">
+                    <img src="images/heart-icon.png" alt="Favorites Icon">
+                </div>
+                <div class="icon">
+                    <img src="images/bell-icon.png" alt="Notifications Icon">
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="register-form-container">
+            <h2>Kayıt Ol</h2>
+            <form id="register-form">
+                <label for="first-name">Ad:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <small class="error-message" id="first-name-error">Yalnızca harfler geçerlidir.</small>
+
+                <label for="last-name">Soyad:</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <small class="error-message" id="last-name-error">Yalnızca harfler geçerlidir.</small>
+
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error-message" id="email-error">@ sembolünü veya alan uzantısını(Örnek: .com) içeren geçerli bir e-posta adresi girilmelidir.</small>
+
+                <label for="phone">Cep Telefonu:</label>
+                <div class="phone-container">
+                    <select id="country-code">
+                        <option value="+90">🇹🇷 +90</option> <!-- Türkiye -->
+                        <option value="+1">🇺🇸 +1</option> <!-- Amerika -->
+                        <option value="+58">🇻🇪 +58</option> <!-- Venezuela -->
+                        <option value="+86">🇨🇳 +86</option> <!-- Çin -->
+                        <option value="+92">🇵🇰 +92</option> <!-- Pakistan -->
+                        <option value="+39">🇮🇹 +39</option> <!-- İtalya -->
+                        <option value="+44">🇬🇧 +44</option> <!-- Birleşik Krallık -->
+                        <option value="+67">🇦🇺 +67</option> <!-- Avustralya -->
+                    </select>
+                    <input type="tel" id="phone" name="phone" required placeholder="Telefon numarası">
+                </div>
+                
+                
+                
+                <small class="error-message" id="phone-error">Geçerli bir cep telefonu numarası girilmelidir.</small>
+
+                <div class="form-group">
+                    <label for="password">Şifre:</label>
+                    <input type="password" id="password" name="password" required>
+                    <div id="password-rules" class="password-rules">
+                        <p id="length-rule">8 karakterden fazla olmalı</p>
+                        <p id="uppercase-rule">En az bir büyük harf olmalı</p>
+                        <p id="special-char-rule">En az bir özel karakter olmalı(*,&,%,+)</p>
+                    </div>
+                </div>
+                
+
+                <button type="submit" class="register-btn">Kayıt Ol</button>
+
+
+            </form>
+        </div>
+    </main>
+
+    <div id="success-popup" class="popup hidden">
+        <div class="popup-content">
+            <i class="fas fa-check-circle"></i>
+            <p>Kayıt başarılı!</p>
+            <button id="close-popup"><a href="index.html">Ana Sayfaya Dönmek İçin Tıklayınız</a></button>
+        </div>
+       
+    </div>
+    
+
+    <script src="register.js"></script>
+</body>
+</html>
